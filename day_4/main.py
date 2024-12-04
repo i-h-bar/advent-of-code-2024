@@ -19,11 +19,9 @@ DIRECTIONS = [
 ]
 
 
-
 def parse_file(path: str) -> list[list[str]]:
     path = Path(path)
     return [[char for char in list(line)] for line in path.read_text().split("\n")]
-
 
 
 def xmas_count(puzzle: list[list[str]]) -> int:
@@ -46,6 +44,7 @@ def xmas_count(puzzle: list[list[str]]) -> int:
                         count += 1
 
     return count
+
 
 def shape_xmas(puzzle: list[list[str]]) -> int:
     count = 0
