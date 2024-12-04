@@ -1,11 +1,12 @@
 from pathlib import Path
 
+
 def mul_no_conditionals(corrupted_memory) -> int:
     """Purposefully done without regex"""
 
     valid_muls = []
     for i in range(len(corrupted_memory)):
-        if corrupted_memory[i: i+4] != "mul(":
+        if corrupted_memory[i: i + 4] != "mul(":
             continue
         else:
             first = ""
@@ -77,11 +78,6 @@ def main():
     corrupted_memory = Path("input.txt").read_text()
     answer = mul(corrupted_memory)
     print(answer)
-
-
-
-
-
 
 
 if __name__ == "__main__":
